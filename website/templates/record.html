@@ -12,20 +12,21 @@
                 </h3>
                     <div class="card-body">
                         <p class="card-text">
-                            <strong>ID: </strong>{{ record.id }}<br/>
-                            <strong>Address: </strong>{{ record.address }}<br/>
-                            <strong>City: </strong>{{ record.city }}<br/>
-                            <strong>State: </strong>{{ record.state }}<br/>
-                            <strong>Phone: </strong>{{ record.phone }}<br/>
-                            <strong>Zipcode: </strong>{{ record.zipcode }}<br/>
-                            <strong>Email: </strong>{{ record.email }}<br/>
-                            <strong>Created at: </strong>{{ record.created_at }}<br/>
+                            <strong>ID: </strong> {{ record.id }}<br/>
+                            <strong>Address: </strong> {{ record.address }}<br/>
+                            <strong>City: </strong> {{ record.city }}<br/>
+                            <strong>State: </strong> {{ record.state }}<br/>
+                            <strong>Phone: </strong> {{ record.phone }}<br/>
+                            <strong>Zipcode: </strong> {{ record.zipcode }}<br/>
+                            <strong>Email: </strong> {{ record.email }}<br/>
+                            <strong>Created at: </strong> {{ record.created_at }}<br/>
                         </p>
                     </div>
                 </div>
                 <br/>
                 <a href="{% url 'home' %}" class="btn btn-primary">Back</a>
-                <a href="{% url 'home' %}" class="btn btn-danger">Delete</a>
+                <a href="{% url 'delete_record' record.id %}" class="btn btn-danger">Delete</a>
+                <a href="{% url 'update_record' record.id %}" class="btn btn-success">Update Record</a>
         {% endif %}
 </div>   
     
